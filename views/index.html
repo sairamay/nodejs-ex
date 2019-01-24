@@ -282,7 +282,7 @@
     <script>
         function formhandler() {
             var code = $("#code").val();
-            $.get("http://127.0.0.1:8090/event", "code=" + code,
+            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/event", "code=" + code,
                 function (data) {
                     $('#eventresult').html(data);
                 });
@@ -296,7 +296,7 @@
     <script>
         function formhandler() {
             var date = $("#date").val();
-            $.get("http://127.0.0.1:8090/eventdate", "date=" + date,
+            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/eventdate", "date=" + date,
                 function (data) {
                     $('#eventresult').html(data);
                 });
@@ -309,7 +309,7 @@
 
     <script>
         function formhandler() {
-            $.get("http://127.0.0.1:8090/allevents",
+            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/allevents",
                 function (data) {
                     $('#alleventsresult').html(data);
                 });
