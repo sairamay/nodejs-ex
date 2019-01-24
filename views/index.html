@@ -13,6 +13,13 @@
             document.getElementById(hidden).style.display = 'none';
             return false;
         }
+        function show2(shown, hidden1, hidden2, hidden3) {
+            document.getElementById(shown).style.display = 'block';
+            document.getElementById(hidden1).style.display = 'none';
+            document.getElementById(hidden2).style.display = 'none';
+            document.getElementById(hidden3).style.display = 'none';
+            return false;
+        }
     </script>
     <title>Marvel</title>
 
@@ -34,7 +41,7 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="return show('login', 'index');">Login</a>
+                    <a class="nav-link" href="#" onclick="return show2('login', 'index', 'signup', 'index');">Login</a>
                 </li>
             </ul>
         </div>
