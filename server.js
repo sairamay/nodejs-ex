@@ -233,20 +233,15 @@ app.get('/eventdate', function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     console.log("request made for event from date");
     var date = req.query.date;
-    var result = {};
     var exists = false;
     for (var p in events) {
         if (events[p].date == date) {
             exists = true;
-            result[p] = {
-                name: events[p].name,
-                date: events[p].date,
-                location: events[p].location,
-            };
+            code = p;
         }
     }
     if (exists) {
-        res.send(util.inspect(result, { showHidden: false, depth: null }));
+        res.send('Event details: Name: ' + events[code].name + ', Date: ' + events[code].date + ', Location: ' + events[code].location);
     }
     else {
         res.send("No events schedualed for this day")
@@ -257,8 +252,13 @@ app.get('/allevents', function (req, res, next) {
     //res.setHeader("content-type", "application/json");
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    console.log("Request made for all events")
-    res.send(util.inspect(events, { showHidden: false, depth: null }))
+    console.log("Request made for all events");
+    var result = '';
+    for (var p in events) {
+        var line = 'Event Code: ' + p + ', Name: ' + events[p].name + ', Date: ' + events[p].date + ', Location: ' + events[p].location + '\r\n';
+        result += line;
+    }
+    res.send(result);
 })
 
 app.post('/newevent', function (req, res, next) {
