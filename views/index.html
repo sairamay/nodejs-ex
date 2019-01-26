@@ -31,17 +31,17 @@
         </button>
 
         <a class="navbar-brand" href="#">
-            <img src="https://i.pinimg.com/originals/29/f5/b7/29f5b7e2e1f05c14508b8f1d4ee794ad.jpg" width="30" height="30" class="d-inline-block align-top" alt="A4">
+            <img src="avengers.jpg" width="30" height="30" class="d-inline-block align-top" alt="A4">
             Marvelfanatic
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="return show2('index', 'admin', 'signup', 'login');">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="return show2('login', 'admin', 'signup', 'index');">Login</a>
+                    <a class="nav-link" href="#" onclick="return show2('login', 'index', 'signup', 'index');">Login</a>
                 </li>
             </ul>
         </div>
@@ -65,21 +65,21 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://nerdist.com/wp-content/uploads/2017/06/tom-holland-1.jpg" alt="First slide">
+                            <img class="d-block w-100" src="spiderman.jpg" alt="First slide">
                             <div class="carousel-caption d-block">
                                 <h3>Next event: 20/01/19</h3>
                                 <p>Screening of spider-verse</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="https://img.fireden.net/v/image/1528/16/1528163849198.png" alt="Second slide">
+                            <img class="d-block w-100" src="loki.jpg" alt="Second slide">
                             <div class="carousel-caption d-block">
                                 <h3>Upcoming event</h3>
                                 <p>Premiere of new Loki series</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="https://vignette.wikia.nocookie.net/disney-marvel-gotg/images/5/5e/Guardians-of-the-Galaxy-Infinity-War.jpg/revision/latest?cb=20170328171624" alt="Third slide">
+                            <img class="d-block w-100" src="starlord.jpg" alt="Third slide">
                             <div class="carousel-caption d-block">
                                 <h3>Upcoming event</h3>
                                 <p>Guardians of the Galaxy cosplay meetup</p>
@@ -103,7 +103,7 @@
                 <div class="col">
                     <h4>Search events by code or date</h4>
                     <!--search events-->
-                    <form id="eventform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com" method="get">
+                    <form id="eventform" action="http://127.0.0.1:8090" method="get">
                         <div class="form-group">
                             <div class="col-6">
                                 <label for="formGroupExampleInput">Enter an event code:</label>
@@ -113,7 +113,7 @@
                         <div class="col-4"><button type="submit" class="btn btn-primary">Submit</button></div>
                     </form>
                     <br />
-                    <form id="dateform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com" method="get">
+                    <form id="dateform" action="http://127.0.0.1:8090" method="get">
                         <div class="form-group">
                             <div class="col-6">
                                 <label for="formGroupExampleInput">Pick a date:</label>
@@ -130,7 +130,7 @@
                     <h4>List all events</h4>
                     <p>To see all available and upcoming events, click below</p>
                     <br />
-                    <form id="alleventsform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com" method="get">
+                    <form id="alleventsform" action="http://127.0.0.1:8090" method="get">
                         <div class="col-4"><button type="submit" class="btn btn-primary">Get events</button></div>
                     </form>
                     <br />
@@ -144,7 +144,7 @@
     <!--login page-->
     <div class="container" id="login" style="display:none">
         <div class="row justify-content-md-center">
-            <form id="loginform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/">
+            <form id="loginform" action="http://127.0.0.1:8090">
                 <h1>Admin Login</h1>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Username</label>
@@ -164,7 +164,7 @@
     <!--end of login page-->
     <!--signup page-->
     <div class="container" id="signup" style="display:none">
-        <form id="signupform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/" method="post">
+        <form id="signupform" action="http://127.0.0.1:8090" method="post">
             <div class="col-6"><h1>Sign up to events today!</h1></div>
             <div class="form-group">
                 <div class="col-4">
@@ -207,7 +207,7 @@
         <div class="row no-gutters">
             <div class="col-7">
                 <!--add events-->
-                <form id="posteventform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/" method="post">
+                <form id="posteventform" action="http://127.0.0.1:8090" method="post">
                     <div class="col-6"><h2>Add new event</h2></div>
                     <div class="form-group">
                         <div class="col-4">
@@ -246,7 +246,7 @@
                     <div class="col">
                         <!--search people-->
                         <h2>Search people</h2>
-                        <form id="searchform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/" method="get">
+                        <form id="searchform" action="http://127.0.0.1:8090" method="get">
                             <div class="form-group">
                                 <div class="col-4">
                                     <label for="formGroupExampleInput">Enter a username:</label>
@@ -265,7 +265,7 @@
                     <div class="col">
                         <!--list people-->
                         <h2>List users</h2>
-                        <form id="listform" action="http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/" method="get">
+                        <form id="listform" action="http://127.0.0.1:8090" method="get">
                             <div class="col-4"><button type="submit" class="btn btn-primary">Submit</button></div>
                         </form>
                         <br />
@@ -282,7 +282,7 @@
     <script>
         function formhandler() {
             var code = $("#code").val();
-            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/event", "code=" + code,
+            $.get("http://127.0.0.1:8090/event", "code=" + code,
                 function (data) {
                     $('#eventresult').html(data);
                 });
@@ -296,7 +296,7 @@
     <script>
         function formhandler() {
             var date = $("#date").val();
-            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/eventdate", "date=" + date,
+            $.get("http://127.0.0.1:8090/eventdate", "date=" + date,
                 function (data) {
                     $('#eventresult').html(data);
                 });
@@ -309,9 +309,9 @@
 
     <script>
         function formhandler() {
-            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/allevents",
+            $.get("http://127.0.0.1:8090/allevents",
                 function (data) {
-                    $('#alleventsresult').html(data);
+                    $('#alleventsresult').html(data.replace(/\r\n/g, "<br />"));
                 });
             return false;
 
@@ -326,7 +326,7 @@
         function formhandler() {
             var username = $("#username").val();
             var password = $("#password").val();
-            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/login",
+            $.get("http://127.0.0.1:8090/login",
                 {
                     username: $("#username").val(),
                     password: $("#password").val()
@@ -352,7 +352,7 @@
     <script>
         function formhandler() {
             var username = $("#username").val();
-            $.post("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/newperson",
+            $.post("http://127.0.0.1:8090/newperson",
                 {
                     username: $("#username").val(),
                     forename: $("#forename").val(),
@@ -373,7 +373,7 @@
     <script>
         function formhandler() {
             var code = $("#code").val();
-            $.post("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/newevent",
+            $.post("http://127.0.0.1:8090/newevent",
                 {
                     code: $("#code").val(),
                     name: $("#name").val(),
@@ -392,7 +392,7 @@
     <script>
         function formhandler() {
             var username = $("#username").val();
-            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/person", "username=" + username,
+            $.get("http://127.0.0.1:8090/person", "username=" + username,
                 function (data) {
                     $('#personresult').html(data);
                 });
@@ -405,7 +405,7 @@
 
     <script>
         function formhandler() {
-            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/allpeople",
+            $.get("http://127.0.0.1:8090/allpeople",
                 function (data) {
                     $('#peopleresult').html(data);
                 });
