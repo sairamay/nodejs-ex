@@ -141,7 +141,7 @@ app.get('/person', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     console.log("Request made for people")
-    const user = req.query.username;
+    const user = req.query.user;
     res.send('User details: Name: ' + people[user].forename + ' ' + people[user].surname + ', Events: ' + people[user].events);
 })
 
