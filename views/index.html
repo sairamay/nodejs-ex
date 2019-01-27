@@ -117,7 +117,7 @@
                         <div class="form-group">
                             <div class="col-6">
                                 <label for="formGroupExampleInput">Pick a date:</label>
-                                <input class="form-control" type="date" value="2019-01-16" id="date">
+                                <input class="form-control" type="date" value="2019-01-16" id="searchdate">
                             </div>
                         </div>
                         <div class="col-4"><button type="submit" class="btn btn-primary">Submit</button></div>
@@ -169,7 +169,7 @@
             <div class="form-group">
                 <div class="col-4">
                     <label for="formGroupExampleInput">Enter a unique username:</label>
-                    <input type="text" class="username" id="username" placeholder="Username">
+                    <input type="text" class="username" id="u" placeholder="Username">
                 </div>
             </div>
             <div class="form-group">
@@ -191,7 +191,7 @@
                     <select class="form-control" id="event">
                         <option>spiderman</option>
                         <option>loki</option>
-
+                        <option>gotg</option>
                     </select>
                 </div>
             </div>
@@ -212,7 +212,7 @@
                     <div class="form-group">
                         <div class="col-4">
                             <label for="formGroupExampleInput">Enter an event code:</label>
-                            <input type="text" class="form-control" id="code" placeholder="Event code">
+                            <input type="text" class="form-control" id="c" placeholder="Event code">
                         </div>
                     </div>
                     <div class="form-group">
@@ -295,7 +295,7 @@
 
     <script>
         function formhandler() {
-            var date = $("#date").val();
+            var date = $("#searchdate").val();
             $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/eventdate", "date=" + date,
                 function (data) {
                     $('#eventresult').html(data);
@@ -349,10 +349,9 @@
     <!--signup script-->
     <script>
         function formhandler() {
-            var username = $("#username").val();
             $.post("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/newperson",
                 {
-                    username: $("#username").val(),
+                    username: $("#u").val(),
                     forename: $("#forename").val(),
                     surname: $("#surname").val(),
                     event: $("#event").val()
@@ -370,10 +369,9 @@
     <!--admin scripts-->
     <script>
         function formhandler() {
-            var code = $("#code").val();
             $.post("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/newevent",
                 {
-                    code: $("#code").val(),
+                    code: $("#c").val(),
                     name: $("#name").val(),
                     date: $("#date").val(),
                     location: $("#location").val()
