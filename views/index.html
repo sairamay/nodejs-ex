@@ -405,7 +405,7 @@
         function formhandler() {
             $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/allpeople",
                 function (data) {
-                    $('#peopleresult').html(data);
+                    $('#peopleresult').html(data.replace(/\r\n/g, "<br />"));
                 });
             return false;
 
