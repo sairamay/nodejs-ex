@@ -250,7 +250,7 @@
                             <div class="form-group">
                                 <div class="col-4">
                                     <label for="formGroupExampleInput">Enter a username:</label>
-                                    <input type="text" class="form-control" id="username" placeholder="Username">
+                                    <input type="text" class="form-control" id="user" placeholder="Username">
                                 </div>
                             </div>
                             <div class="col-4"><button type="submit" class="btn btn-primary">Submit</button></div>
@@ -389,8 +389,8 @@
 
     <script>
         function formhandler() {
-            var username = $("#username").val();
-            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/person", "username=" + username,
+            var user = $("#user").val();
+            $.get("http://nodejs-mongo-persistent-marvelfanatic.7e14.starter-us-west-2.openshiftapps.com/person", "user=" + user,
                 function (data) {
                     $('#personresult').html(data);
                 });
