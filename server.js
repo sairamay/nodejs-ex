@@ -150,8 +150,12 @@ app.get('/allpeople', function (req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     console.log("Request made for all people")
-    //resp.send('All users: ' + Object.entries(people));
-    res.send(util.inspect(people, { showHidden: false, depth: null }))
+    var result = '';
+    for (var p in people) {
+        var line = 'Username: ' + p + ', Foreame: ' + people[p].forename + ', Surname: ' + people[p].surname + ', Event/s: ' + people[p].events + '\r\n';
+        result += line;
+    }
+    res.send(result);
 })
 
 app.get('/people', function (req, res) {
