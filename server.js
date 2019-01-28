@@ -168,7 +168,6 @@ app.get('/people/:username', function (req, res) {
 })
 
 app.post('/newperson', function (req, res) {
-    //res.setHeader("content-type", "application/json");
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     const p = req.body.username;
@@ -189,7 +188,6 @@ app.post('/newperson', function (req, res) {
 })
 
 app.post('/people', function (req, res) {
-    //res.setHeader("content-type", "application/json");
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     console.log("New person request " + JSON.stringify(req.headers));
