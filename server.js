@@ -276,7 +276,7 @@ app.post('/newevent', function (req, res, next) {
             location: req.body.location,
         };
         console.log(events[p]);
-        res.send("request for new event called " + req.body.code);
+        res.send("Successful request for new event called " + req.body.code);
     }
     else {
         res.send("This event code is already in use, please choose another")
