@@ -286,7 +286,6 @@ app.post('/newevent', function (req, res, next) {
 
 //Authentication
 app.get('/login', function (req, res, next) {
-    //res.setHeader("content-type", "application/json");
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     const user = req.query.username;
